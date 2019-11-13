@@ -13,12 +13,14 @@ import com.udacity.course3.reviews.repository.ProductsRepository;
 import com.udacity.course3.reviews.repository.ReviewsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
 
 
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
+@TestPropertySource(properties = "mongo.enabled=false")
 public class ReviewsApplicationTests {
 
 	@Autowired
